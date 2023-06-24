@@ -1,0 +1,26 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+    grid-template-rows: 1fr;
+    
+    grid-gap: 20px;
+}
+
+
+.results {
+
+    padding: 70px 0;
+  
+    text-align: center;
+  }
+
+.displayError{
+    border: red;
+}
+img {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border: none;
+  }
+    

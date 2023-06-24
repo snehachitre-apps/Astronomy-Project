@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/apod.js"></script>
+	<link rel="stylesheet" href="./css/apod.css">
+</head>
+<body>
+<!-- Webpage to display APOD  based on the user entered date-->
+<h1>Astronomy tools</h1>
+<br/>
+<!-- enter date.  time does not matter. if possible change this to only date picker-->
+<div>
+	<img id="marsImage">
+	<!--section for randomly displaying mars image.-->
+</div>
+	<!-- form id helps for submit button action-->
+<h2>APOD and Weather Services </h2>
+<!--<form id="eventform">-->
+	<div class="grid-container">
+	<div class="grid-child nativeDatePicker">
+		<p>
+			<!-- this requirement is by NASA API-->
+			<h3>Enter Date Below Between June 16, 1995 to Today for APOD service</h3>
+		</p>
+		<label for="inputdate">Day:</label>
+		<input type="datetime-local" id="inputdate" name="inputdate">
+		<p><button type="button" onclick="submitForm();" id="submitdate">Get APOD!</button></p>
+	</div>
+	<!-- once button is submitted it will call subitform function in apod.js file. -->
+	<div id ="grid-child weather">
+		<h3>Enter USA Zip Code below. *No Date restriction</h3>
+		<p><input id="zip" name="zip" type="text" pattern="[0-9]*"> *Required for Weather Service!</p>
+		<p><button type="button" onclick="checkWeather();">Check Weather conditions for this day</button></p>
+	</div>
+</div>
+<!--</form>-->
+
+<div class="results">
+	<!-- Code to display the API response-->
+		<div id="displayResult">
+				<!-- title of the image-->
+			<h2 id="heading"></h2>
+				<!-- the image if the status is 200-->
+			<br/>
+			<div>
+				<img id="myImage">
+			</div>
+					
+			<br/>
+				<!-- explanation of the image-->
+			<p id="explanation"></p>
+
+		</div>
+		<!--Display error if entered wrong date-->
+		<div id="displayError">
+		</div>
+		<div id="displayWeather">
+				<!--display weather conditions-->
+
+		</div>
+	</div>
+
+</body>
+</html>

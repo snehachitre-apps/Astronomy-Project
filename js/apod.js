@@ -1,7 +1,7 @@
 //function that gets called after button click action from index.html
   //api key given by nasa. hiow to not expose api key in code?
-let nasa_api_key="BIpGQgeUrKXbXEN2hZc6q04Hho3bWP0KszNfKtaV";
-let weather_api_key="3H5DK4WLA5DUHYHA77PT87G68";
+let nasa_api_key = process.env.NASA_API_KEY;
+let weather_api_key = process.env.WEATHER_API_KEY;
 
 function submitForm() {
 
